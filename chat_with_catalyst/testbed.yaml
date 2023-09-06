@@ -1,0 +1,19 @@
+---
+devices:
+  csr1000v-1:
+    alias: "Sandbox Router"
+    type: "router"
+    os: "iosxe"
+    platform: csr1000v
+    credentials:
+      default:
+        username: developer
+        password: lastorangerestoreball8876
+    connections:
+      cli:
+        protocol: ssh
+        ip: sandbox-iosxe-recomm-1.cisco.com
+        port: 22
+        ssh_options: -o KexAlgorithms=+diffie-hellman-group-exchange-sha1 -o HostKeyAlgorithms=+ssh-rsa
+        arguments:
+          connection_timeout: 360
